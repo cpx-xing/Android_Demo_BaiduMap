@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg">
+
+    <LinearLayout
+        android:id="@+id/frag_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/frag_tv_currenttemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10℃"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/frag_tv_city"
+                style="@style/todaytext"
+                android:layout_below="@id/frag_tv_currenttemp"
+                android:text="北京" />
+
+            <TextView
+                android:id="@+id/frag_tv_weather"
+                style="@style/todaytext"
+                android:layout_below="@id/frag_tv_city"
+                android:text="晴" />
+
+            <TextView
+                android:id="@+id/frag_tv_date"
+                style="@style/todaytext"
+                android:layout_below="@id/frag_tv_weather"
+                android:layout_marginTop="20dp"
+                android:text="2021-03-10" />
+
+            <TextView
+                android:id="@+id/frag_tv_wind"
+                style="@style/todaytext"
+                android:layout_below="@id/frag_tv_date"
+                android:text="东北风3~4级" />
+
+            <TextView
+                android:id="@+id/frag_tv_line"
+                android:layout_width="2dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/frag_tv_wind"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="2dp"
+                android:layout_toRightOf="@id/frag_tv_wind"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/frag_tv_temprange"
+                style="@style/todaytext"
+                android:layout_alignBottom="@id/frag_tv_wind"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/frag_tv_line"
+                android:text="-1℃到15℃" />
+
+            <ImageView
+                android:id="@+id/frag_iv_today"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/icon" />
+        </RelativeLayout>
+        <!--        中间显示的未来三天的天气-->
+        <LinearLayout
+            android:id="@+id/frag_center_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/frag_center_bg"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+        </LinearLayout>
+
+        <!--底下显示各种指数-->
+        <LinearLayout
+            android:id="@+id/frag_bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/frag_center_bg"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:id="@+id/frag_ll_line1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/farg_index_tv_dress"
+                    style="@style/indextext"
+                    android:drawableBottom="@mipmap/icon_cloth"
+                    android:text="穿衣指数" />
+
+                <ImageView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#2E8B57" />
+
+                <TextView
+                    android:id="@+id/frag_index_tv_washcar"
+                    style="@style/indextext"
+                    android:drawableBottom="@mipmap/icon_car"
+                    android:text="洗车指数" />
+
+                <ImageView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#2E8B57" />
+
+                <TextView
+                    android:id="@+id/frag_index_tv_cold"
+                    style="@style/indextext"
+                    android:drawableBottom="@mipmap/icon_ganmao"
+                    android:text="感冒指数" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#2E8B57" />
+
+            <LinearLayout
+                android:id="@+id/farg_ll_line2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/farg_index_tv_sport"
+                    style="@style/indextext"
+                    android:drawableBottom="@mipmap/icon_sport"
+                    android:text="运动指数" />
+
+                <ImageView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#2E8B57" />
+
+                <TextView
+                    android:id="@+id/frag_index_tv_rasy"
+                    style="@style/indextext"
+                    android:drawableBottom="@mipmap/icon_light"
+                    android:text="紫外线指数" />
+
+                <ImageView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#2E8B57" />
+
+                <TextView style="@style/indextext" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/getWeatherMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/frag_center_bg"
+            android:gravity="center"
+            android:text="天气信息" />
+    </LinearLayout>
+
+
+</ScrollView>

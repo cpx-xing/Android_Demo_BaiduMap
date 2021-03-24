@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_margin="10dp"
+    android:background="@drawable/city_choic_bg">
+    <TextView
+        android:id="@+id/more_city_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="杭州"
+        android:layout_marginTop="7dp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="10dp"
+        android:textSize="20sp"/>
+    <ImageView
+        android:id="@+id/more_city_item_img"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@mipmap/defult0"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@+id/more_city_item_temp"/>
+    <TextView
+        android:id="@+id/more_city_item_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15~16℃"
+        android:layout_marginTop="7dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/delete"/>
+    <ImageView
+        android:id="@+id/delete"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@mipmap/delete"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="15dp"
+        android:layout_alignParentRight="true"/>
+</RelativeLayout>
+
+</LinearLayout>
